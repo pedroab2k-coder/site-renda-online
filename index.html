@@ -17,15 +17,15 @@
 
   <style>
     :root{
-      --bg:#0f0f23;
-      --card:#151530;
-      --ink:#F3F4F6;
-      --muted:#B9B6D3;
-      --primary:#8b5cf6;
-      --primary-2:#6366f1;
-      --accent:#22d3ee;
-      --success:#22c55e;
-      --danger:#ef4444;
+      --bg:#0f0f23;             /* fundo principal */
+      --card:#151530;           /* cartões */
+      --ink:#F3F4F6;            /* texto base */
+      --muted:#B9B6D3;          /* texto suave */
+      --primary:#8b5cf6;        /* roxo */
+      --primary-2:#6366f1;      /* indigo */
+      --accent:#22d3ee;         /* ciano */
+      --success:#22c55e;        /* verde */
+      --danger:#ef4444;         /* vermelho */
       --shadow: 0 10px 30px rgba(0,0,0,.25);
       --rad:18px;
       --max:1100px;
@@ -225,12 +225,18 @@
   </div>
 
   <footer class="container">
-    © <span id="year"></span> • Renda com IA • Todos os direitos reservados • <a href="policy.html" id="policyLink">Política de Privacidade</a>
+    © <span id="year"></span> • Renda com IA • Todos os direitos reservados • <a href="#" id="policyLink">Política de Privacidade</a>
   </footer>
 
   <script>
   // ---------------- CONFIG & DATA ---------------- //
-  const CHECKOUT_URL = "https://pay.seu-gateway.com.br/SEU_ID?src=landing_timeline"; // TROQUE pelo link real (Kiwify/Hotmart/etc.)
+  const CHECKOUT_URL = "https://pay.seu-gateway.com.br/SEU_ID?src=landing_timeline"; // TODO: troque pelo link real (Kiwify/Hotmart/etc.)
+
+  const defaultConfig = {
+    timeline_title: "💰 Evolução: Como Ganhar Dinheiro na Internet",
+    timeline_subtitle: "Da Web 1.0 à Era da Inteligência Artificial (1995 - 2025)",
+    instruction_text: "Clique nos eventos para ver os aprendizados e modelos de monetização",
+  };
 
   const events = [
     {year:"1995-2000", title:"Sites e Banners", category:"Web 1.0", preview:"Primeiros sites estáticos; acordos diretos com anunciantes.", details:"Criar site institucional já gerava receita. Venda de espaços de banner e diretórios. HTML básico = diferencial.", side:"left"},
@@ -300,7 +306,7 @@
 
   renderTimeline();
 
-  // JSON-LD (Product)
+  // basic JSON-LD (Product)
   const ld = {
     "@context":"https://schema.org",
     "@type":"Product",
