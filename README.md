@@ -1,19 +1,22 @@
-# Site Renda Online (Landing + Timeline)
+Site Renda Online (Abas + Partículas + Mockup 3D + Lead)
 
-Landing page estática para venda do eBook **ChatGPT + Grok**.
+Landing estática com navegação por abas, fundo interativo, mockup 3D do eBook e captação de e-mails.
 
-## Como publicar no GitHub Pages
-1. Crie o repositório no GitHub (público).
-2. Envie estes arquivos (`index.html`, `policy.html`, `README.md`).
-3. Vá em **Settings → Pages** e selecione **Branch: `main`** e **Folder: `/ (root)`**.
-4. Salve. O site ficará disponível em `https://SEU_USUARIO.github.io/NOME_DO_REPO/`.
+## Publicar no GitHub Pages
+1. Crie o repositório (público) e envie `index.html`, `policy.html`, `README.md`.
+2. Em **Settings → Pages**, selecione **Branch: main** e **Folder: /(root)**.
+3. O site ficará em `https://SEU_USUARIO.github.io/NOME_DO_REPO/`.
 
-## Onde configurar o link de checkout
-No `index.html`, procure por `CHECKOUT_URL` e substitua por seu link real (Kiwify/Hotmart/etc.).
+## Configurar Checkout e Lead
+- No `index.html`, ajuste:
+```js
+const CHECKOUT_URL = "https://pay.seu-gateway.com.br/SEU_ID?src=landing_tabs";
+const LEAD_POST_URL = "https://formspree.io/f/SEU_ENDPOINT"; // crie seu endpoint grátis no Formspree
+```
+- Se `LEAD_POST_URL` ficar vazio, o formulário abre um `mailto:` como fallback.
 
-## Customização rápida
-- Cores e estilos em CSS variables no `:root`.
-- Eventos da timeline no array `events` (JS).
-
----
-Feito para carregamento rápido e sem dependências externas (apenas Google Fonts).
+## Personalização
+- Cores: altere variáveis CSS no `:root`.
+- Mockup 3D: editável via CSS (`.cover:before/.after`).
+- Linha do tempo: edite o array `events` no JS.
+oading README.md…]()
