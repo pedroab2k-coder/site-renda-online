@@ -19,3 +19,4 @@ const LEAD_POST_URL = "https://formspree.io/f/SEU_ENDPOINT"; // crie seu endpoin
 - Cores: altere variáveis CSS no `:root`.
 - Mockup 3D: editável via CSS (`.cover:before/.after`).
 - Linha do tempo: edite o array `events` no JS.
+
