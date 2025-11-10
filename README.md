@@ -1,4 +1,5 @@
-Site Renda Online (Abas + Partículas + Mockup 3D + Lead)
+[README.md](https://github.com/user-attachments/files/23455545/README.md)
+# Site Renda Online (Abas + Partículas + Mockup 3D + Lead)
 
 Landing estática com navegação por abas, fundo interativo, mockup 3D do eBook e captação de e-mails.
 
@@ -19,4 +20,3 @@ const LEAD_POST_URL = "https://formspree.io/f/SEU_ENDPOINT"; // crie seu endpoin
 - Cores: altere variáveis CSS no `:root`.
 - Mockup 3D: editável via CSS (`.cover:before/.after`).
 - Linha do tempo: edite o array `events` no JS.
-oading README.md…]()
